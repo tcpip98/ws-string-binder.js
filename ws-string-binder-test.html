@@ -5,16 +5,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width,initial-scale=1">
 
-    <title></title>
+    <title>Test page of ws-string-binder.js</title>
 
     <script type="text/javascript" src="./bin/ws-string-binder.js"></script>
-    <script type="text/javascript">
-    	alert( "{my1} {my2} {my3}.".$bind( { my1:"My", my2:"Name is", my3:"Jake Wonsang Lee" } ) );
-    </script>
 </head>
+<body></body>
+<script type="text/javascript">
+	var bindings = { "package-name" : "ws-string-binder.js"
+		           , "package-version" : "v0.0.1"
+		           };
 
-<body>
+	var content = [ "<li>package-name : {package-name}</li>"
+	              ,	"<li>version : {package-version}</li>"
+	              ].join( "" );
 
-</body>
-
+	document.body.innerHTML = content.$prepend( "<ul>" )
+	                                 .$append( "</ul>" )
+	                                 .$bind( bindings )
+	                                 .$prepend( "{}" )
+	                                 .$bind( "<h1>Test of ws-string-binder.js</h1>" );
+</script>
 </html>
