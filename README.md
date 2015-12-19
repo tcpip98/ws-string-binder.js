@@ -68,7 +68,7 @@ var output = "My name is"
 ````
   
   
-## Prepend strings
+#### Prepend strings
 
 ````javascript
 var output = "is his e-mail address."
