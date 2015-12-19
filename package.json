@@ -1,0 +1,41 @@
+{
+  "name": "ws-string-binder.js",
+  "version": "1.0.0",
+  "description": "Light-weight pure javascript plugin to bind string variables easily and browser-insensitively.",
+  "main": "ws-string-binder.js",
+  "directories": {},
+  "scripts": {
+    "test": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tcpip98/ws-string-binder.js.git"
+  },
+  "keywords": [
+    "javascript-plugin",
+    "javascript plugin",
+    "javascript string utility",
+    "javascript stringutil",
+    "javascript string bind",
+    "string binder",
+    "wsstringbinder",
+    "ws-string-binder"
+  ],
+  "author": "Jake Wonsang Lee",
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/tcpip98/ws-string-binder.js/blob/master/LICENSE"
+    }
+  ],
+  "bugs": {
+    "url": "https://github.com/tcpip98/ws-string-binder.js/issues"
+  },
+  "homepage": "https://github.com/tcpip98/ws-string-binder.js#readme",
+  "download": "https://github.com/tcpip98/ws-string-binder.js",
+  "dependencies": {},
+  "bin": {
+    "ws-string-binder.js": "ws-string-binder.js"
+  },
+  "license": "MIT"
+}

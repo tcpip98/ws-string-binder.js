@@ -5,11 +5,13 @@
  *   Author : Jake Wonsang Lee. ( mailto://tcpip98@gmail.com )
  *
  *   GitHub : https://github.com/tcpip98/ws-string-binder.js
- *   NPM : https://www.npmjs.com/package/ws_string_binder_js
+ *   GitPage : http://tcpip98.github.io/ws-string-binder.js
+ *   NPM : https://www.npmjs.com/package/ws-string-binder.js
  *
  *   License :
  *      The MIT License (MIT)
  *
+ *      ws-string-binder.js
  *      Copyright (c) 2015 Jake Wonsang Lee( tcpip98@gmail.com )
  *
  *      Permission is hereby granted, free of charge, to any person obtaining a copy
