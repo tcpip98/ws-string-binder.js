@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="Ws-string-binder.js : Pure javascript plugin to bind string variables easily and browser-insensitively.">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Ws-string-binder.js</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/tcpip98/ws-string-binder.js">View on GitHub</a>
+
+          <h1 id="project_title">Ws-string-binder.js</h1>
+          <h2 id="project_tagline">Pure javascript plugin to bind string variables easily and browser-insensitively.</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/tcpip98/ws-string-binder.js/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/tcpip98/ws-string-binder.js/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>
+<a id="ws-string-binderjs" class="anchor" href="#ws-string-binderjs" aria-hidden="true"><span class="octicon octicon-link"></span></a>ws-string-binder.js</h1>
+
+<h1>
+<a id="light-weight-pure-javascript-plugin-to-bind-string-variables-easily-and-browser-insensitively--" class="anchor" href="#light-weight-pure-javascript-plugin-to-bind-string-variables-easily-and-browser-insensitively--" aria-hidden="true"><span class="octicon octicon-link"></span></a>Light-weight pure javascript plugin to bind string variables easily and browser-insensitively.  </h1>
+
+<h2>
+<a id="generals" class="anchor" href="#generals" aria-hidden="true"><span class="octicon octicon-link"></span></a>Generals</h2>
+
+<hr>
+
+<p>The <strong>ws-string-binder.js</strong> provides string binder methods to improve explicitness of your code.<br>
+The string concatenating operation is very common technique in lots of business application practically.<br>
+But many of times, this basic operation makes code dirty and chaotic.<br>
+This is why I made this plugin.  </p>
+
+<p>This plugin is designed as a prototype function of javascript String object so that can be used by any circumstances.  </p>
+
+<h2>
+<a id="how-to-use" class="anchor" href="#how-to-use" aria-hidden="true"><span class="octicon octicon-link"></span></a>How to use</h2>
+
+<hr>
+
+<p>There are three types of binding function $bind(), appending function $append(), and prepending function $prepend() defined.<br>
+And these are fully supports method chaining.  </p>
+
+<p>I am sure that you probably know all about this plugin as soon as see the following code fragments without any of API documents.  </p>
+
+<h4>
+<a id="simple-binding" class="anchor" href="#simple-binding" aria-hidden="true"><span class="octicon octicon-link"></span></a>Simple Binding</h4>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> output <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">"</span>The {} plugin requires that {} file is included.<span class="pl-pds">"</span></span>
+             .<span class="pl-en">$bind</span>( <span class="pl-s"><span class="pl-pds">"</span>ws-string-binder.js<span class="pl-pds">"</span></span> );
+<span class="pl-c">// output : The ws-string-binder.js plugin require ws-string-binder.js file is included.</span>
+
+<span class="pl-k">var</span> output <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">"</span>The {} plugin requires that {} file is included.<span class="pl-pds">"</span></span>
+             .<span class="pl-en">$bind</span>( <span class="pl-s"><span class="pl-pds">"</span>ws-string-binder.js(ver. {})<span class="pl-pds">"</span></span> )
+             .<span class="pl-en">$bind</span>( <span class="pl-s"><span class="pl-pds">"</span>1.0.0<span class="pl-pds">"</span></span> );
+<span class="pl-c">// output : The ws-string-binder.js(ver. 1.0.0) plugin require ws-string-binder.js(ver. 1.0.0) file is included.</span></pre></div>
+
+<h4>
+<a id="indexical-binding-with-array" class="anchor" href="#indexical-binding-with-array" aria-hidden="true"><span class="octicon octicon-link"></span></a>Indexical Binding with Array</h4>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> bindings <span class="pl-k">=</span> [ <span class="pl-s"><span class="pl-pds">"</span>Seoul<span class="pl-pds">"</span></span>, <span class="pl-s"><span class="pl-pds">"</span>South Korea<span class="pl-pds">"</span></span>, <span class="pl-s"><span class="pl-pds">"</span>East Asia<span class="pl-pds">"</span></span> ];
+<span class="pl-k">var</span> output <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">"</span>The {0} is the capital of {1}. {1} is located in {2}.<span class="pl-pds">"</span></span>
+             .<span class="pl-en">$bind</span>( bindings );
+<span class="pl-c">// output : The Seoul is the capital of South Korea. South Korea is located in East Asia.</span></pre></div>
+
+<h4>
+<a id="associative-binding-with-json-object" class="anchor" href="#associative-binding-with-json-object" aria-hidden="true"><span class="octicon octicon-link"></span></a>Associative Binding with JSON object</h4>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> bindings <span class="pl-k">=</span> { <span class="pl-s"><span class="pl-pds">"</span>city<span class="pl-pds">"</span></span> <span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>Seoul<span class="pl-pds">"</span></span>
+               , <span class="pl-s"><span class="pl-pds">"</span>country<span class="pl-pds">"</span></span> <span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>South Korea<span class="pl-pds">"</span></span>
+               , <span class="pl-s"><span class="pl-pds">"</span>location<span class="pl-pds">"</span></span> <span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>East Asia<span class="pl-pds">"</span></span>
+               };
+<span class="pl-k">var</span> output <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">"</span>The {city} is the capital of {country}. {country} is located in {location}.<span class="pl-pds">"</span></span>
+             .<span class="pl-en">$bind</span>( bindings );
+<span class="pl-c">// output : The Seoul is the capital of South Korea. South Korea is located in East Asia.</span></pre></div>
+
+<h4>
+<a id="append-strings" class="anchor" href="#append-strings" aria-hidden="true"><span class="octicon octicon-link"></span></a>Append strings</h4>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> output <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">"</span>My name is<span class="pl-pds">"</span></span>
+             .<span class="pl-en">$append</span>( <span class="pl-s"><span class="pl-pds">"</span>Jake Wonsang Lee<span class="pl-pds">"</span></span> );
+             .<span class="pl-en">$append</span>( <span class="pl-s"><span class="pl-pds">"</span>.<span class="pl-pds">"</span></span> );
+<span class="pl-c">// output : My name is Jake Wonsang Lee.</span></pre></div>
+
+<h2>
+<a id="prepend-strings" class="anchor" href="#prepend-strings" aria-hidden="true"><span class="octicon octicon-link"></span></a>Prepend strings</h2>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> output <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">"</span>is his e-mail address.<span class="pl-pds">"</span></span>
+             .<span class="pl-en">$prepend</span>( <span class="pl-s"><span class="pl-pds">"</span> <span class="pl-pds">"</span></span> )
+             .<span class="pl-en">$prepend</span>( <span class="pl-s"><span class="pl-pds">"</span>tcpip98@gmail.com<span class="pl-pds">"</span></span> );
+<span class="pl-c">// output : tcpip98@gmail.com is his e-mail address.</span></pre></div>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Ws-string-binder.js maintained by <a href="https://github.com/tcpip98">tcpip98</a></p>
+        <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
