@@ -24,12 +24,10 @@ I am sure that you probably know all about this plugin as soon as see the follow
 #### Simple Binding
 
 ````javascript
-// Simple Binding
 var output = "The {} plugin require {} file is included."
              .$bind( "ws-string-binder.js" );
 // output : The ws-string-binder.js plugin require ws-string-binder.js file is included.
 
-// Simple Binding( Chaining )
 var output = "The {} plugin require {} file is included."
              .$bind( "ws-string-binder.js( ver. {})" )
              .$bind( "1.0.0" );
