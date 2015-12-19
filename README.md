@@ -16,7 +16,7 @@ This plugin is designed as a prototype function of javascript String object so t
 ## How to use  
 --------------------------------------  
 There are three types of binding function $bind(), appending function $append(), and prepending function $prepend() defined.  
-And these are all supports method chaining.  
+And these are fully supports method chaining.  
 
 I am sure that you probably know all about this plugin as soon as see the following code fragments without any of API documents.  
 
@@ -33,8 +33,8 @@ var output = "The {} plugin requires that {} file is included."
              .$bind( "1.0.0" );
 // output : The ws-string-binder.js(ver. 1.0.0) plugin require ws-string-binder.js(ver. 1.0.0) file is included.
 ````
-
-
+  
+  
 #### Indexical Binding with Array
 
 ````javascript
@@ -43,8 +43,8 @@ var output = "The {0} is the capital of {1}. {1} is located in {2}."
              .$bind( bindings );
 // output : The Seoul is the capital of South Korea. South Korea is located in East Asia.
 ````
-
-
+  
+  
 #### Associative Binding with JSON object
 
 ````javascript
@@ -56,20 +56,24 @@ var output = "The {city} is the capital of {country}. {country} is located in {l
              .$bind( bindings );
 // output : The Seoul is the capital of South Korea. South Korea is located in East Asia.
 ````
-
-
+  
+  
 #### Append strings
 
 ````javascript
-var output = "My name is "
-             .$append( "Jake Wonsang Lee." );
+var output = "My name is"
+             .$append( "Jake Wonsang Lee" );
+             .$append( "." );
 // output : My name is Jake Wonsang Lee.
 ````
-
-### Prepend strings
+  
+  
+## Prepend strings
 
 ````javascript
-var output = " is his e-mail address."
+var output = "is his e-mail address."
+             .$prepend( " " )
              .$prepend( "tcpip98@gmail.com" );
 // output : tcpip98@gmail.com is his e-mail address.
 ````
+  
