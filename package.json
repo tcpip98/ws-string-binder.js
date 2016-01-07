@@ -1,6 +1,6 @@
 {
   "name": "ws-string-binder.js",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Light-weight pure javascript plugin to bind string variables easily and browser-insensitively.",
   "main": "ws-string-binder.js",
   "directories": {},

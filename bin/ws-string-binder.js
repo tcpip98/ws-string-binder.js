@@ -1,7 +1,7 @@
 ﻿/*************************************************************************************************************
  * ws-string-binder.js
  *
- *   Version : 1.0.0
+ *   Version : 1.1.0
  *   Author : Jake Wonsang Lee. ( mailto://tcpip98@gmail.com )
  *
  *   GitHub : https://github.com/tcpip98/ws-string-binder.js
@@ -33,17 +33,10 @@
  *      SOFTWARE.
  *
  *************************************************************************************************************/
-
-
-
-
-
-/************************************************************************
- * Main object of ws-string-binder.js
- ************************************************************************/
-
-if( !!!wsStringBinder ) { // Ensure keep singleton
-
+( function() {
+	/************************************************************************
+	 * Main object of ws-string-binder.js
+	 ************************************************************************/
 	var wsStringBinder = {
 
 	  // Internal prefix
@@ -161,33 +154,24 @@ if( !!!wsStringBinder ) { // Ensure keep singleton
 	  }
 
 	};
+	
+	
+	/************************************************************************
+	 * Assign ws-string-binder methods to prototype of the String.
+	 ************************************************************************/
 
-}
-
-
-
-/************************************************************************
- * Assign ws-string-binder methods to prototype of the String.
- ************************************************************************/
-
-
-/*
- * Define prototype method of $append
- */
-String.prototype.$append = function( suffix ) {
-	return wsStringBinder.append( this, suffix );
-}
-
-/*
- * Define prototype method of $append
- */
-String.prototype.$prepend = function( prefix ) {
-	return wsStringBinder.prepend( this, prefix );
-}
-
-/*
- * Define prototype method of $bind
- */
-String.prototype.$bind = function( bindings ) {
-	return wsStringBinder.bind( this, bindings );
-}
+	// Define prototype method of $append 	
+	String.prototype.$append = function( suffix ) {
+		return wsStringBinder.append( this, suffix );
+	}
+	
+	// Define prototype method of $append
+	String.prototype.$prepend = function( prefix ) {
+		return wsStringBinder.prepend( this, prefix );
+	}
+	
+	// Define prototype method of $bind
+	String.prototype.$bind = function( bindings ) {
+		return wsStringBinder.bind( this, bindings );
+	}
+})();
